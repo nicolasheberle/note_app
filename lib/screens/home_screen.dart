@@ -1,8 +1,8 @@
-import '../../models/note_model.dart';
-import '../../screens/create_note.dart';
-import '../../screens/widgets/note_card.dart';
-import '../../utils/database_helper.dart';
 import 'package:flutter/material.dart';
+import '../models/note_model.dart';
+import 'create_note.dart';
+import 'widgets/note_card.dart';
+import '../utils/database_helper.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -41,6 +41,10 @@ class _HomeScreenState extends State<HomeScreen> {
           Navigator.of(context).push(MaterialPageRoute(
             builder: (context) => CreateNote(
               onNewNoteCreated: onNewNoteCreated,
+              onNoteUpdated: () {
+                // Atualiza a lista de notas na tela atual
+                fetchNotes();
+              },
             ),
           ));
         },

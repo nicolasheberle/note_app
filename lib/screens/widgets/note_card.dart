@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../models/note_model.dart';
-import '../widgets/note_view.dart';
+import 'note_view.dart';
 
 class NoteCard extends StatelessWidget {
   const NoteCard({
@@ -43,12 +43,6 @@ class NoteCard extends StatelessWidget {
                       fontSize: 20,
                     ),
                   ),
-              /*    IconButton(
-                    onPressed: () {
-                       _editNote(context);
-                    },
-                    icon: const Icon(Icons.edit),
-                  ),*/
                 ],
               ),
               const SizedBox(height: 12,),
